@@ -1,0 +1,39 @@
+.form {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      
+.input {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-left: 25px;
+        width: 270px;
+        height: 25px;
+        border-radius: 25px;
+}
+      
+.item {
+        align-items: center;
+        margin-bottom: 15px;
+}
+      
+.text {
+        display: inline;
+        margin-right: 20px;
+        margin-bottom: 0;
+}
+      
+.button {
+        background-color: #6580f8;
+        border-radius: 25px;
+        border: transparent;
+        padding: 5px 10px;
+        font-size: 20px;
+        box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2.6px;
+}
+      
+.button:hover {
+        box-shadow: none;
+        background-color: #e4fd74;
+}
