@@ -28,7 +28,7 @@ function App ( ){
 
   const filterNames = (e) => {
     const filterValue = e.target.value;
-    setFilter({ filter: filterValue });
+    setFilter(filterValue);
   };
 
   const handleDelete = (contactId) => {
@@ -38,14 +38,14 @@ function App ( ){
   const lowerCaseFilter = filter.toLowerCase();
 
   const filteredContacts = contacts.filter((contact) =>
-      contact.name.toLowerCase().includes(lowerCaseFilter));
+    contact.name.toLowerCase().includes(lowerCaseFilter));
 
   return (
         <div className="App">
           <h1>Phonebook</h1>
           <Form onFormSubmit={handleSubmit} />
           <h2>Contacts</h2>
-          <Filter value={filter} onChangeHandler={filterNames} />
+          <Filter value={filter} onChangeName={filterNames} />
           <Contacts contacts={filteredContacts} onDeleteContact={handleDelete} />
         </div>
   );
