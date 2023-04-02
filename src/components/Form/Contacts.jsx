@@ -4,7 +4,7 @@ import css from 'components/Form/Form.module.css';
 const Contacts = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
-      {contacts.map(({ id, name, number }) => (
+      {contacts.map (({ id, name, number }) => (
         <li key={id} className={css.item}>
           <p className={css.text}>
             {name}: {number}

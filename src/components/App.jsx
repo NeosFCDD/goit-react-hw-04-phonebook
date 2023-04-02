@@ -27,18 +27,17 @@ function App ( ){
   };
 
   const filterNames = (e) => {
-    const filterValue = e.target.value;
-    setFilter(filterValue);
+    setFilter(e.currentTarget.value)
   };
 
   const handleDelete = (contactId) => {
     setContacts(() => contacts.filter((contact) => contact.id !== contactId));
   };
 
-  const lowerCaseFilter = filter.toLowerCase();
-
-  const filteredContacts = contacts.filter((contact) =>
-    contact.name.toLowerCase().includes(lowerCaseFilter));
+  const filteredContacts = () => {
+    const lowerCase = filter.toLowerCase();
+    return contacts.filter((contact) =>contact.name.toLowerCase().includes(lowerCase));
+  }; 
 
   return (
         <div className="App">
