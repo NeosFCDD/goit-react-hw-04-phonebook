@@ -2,22 +2,19 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import css from "components/Form/Form.module.css";
 
-function Form ({onFormSubmit}) {
+export default function Form ({onFormSubmit}) {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-
     switch (name) {
       case "name":
         setName(value);
         break;
-      
       case "number":
         setNumber(value);
         break;
-        
       default:
         return;  
     }
@@ -30,7 +27,7 @@ function Form ({onFormSubmit}) {
     setNumber("");
   };
 
-    return (
+  return (
       <form className={css.form} onSubmit={handleState}>
         <label>
           Name
@@ -62,11 +59,9 @@ function Form ({onFormSubmit}) {
           Add contact
         </button>
       </form>
-    );
-  }
+  );
+}
 
 Form.propTypes = {
   onFormSubmit: PropTypes.func.isRequired,
 };
-
-export default Form;

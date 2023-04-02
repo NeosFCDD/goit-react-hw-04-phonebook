@@ -3,13 +3,13 @@ import css from 'components/Form/Form.module.css';
 
 const Contacts = ({ contacts, onDeleteContact }) => {
   return (
-    <ul className={css.list}>
+    <ul>
       {contacts.map(({ id, name, number }) => (
         <li key={id} className={css.item}>
           <p className={css.text}>
             {name}: {number}
           </p>
-          <button className={css.btn} type="button" onClick={() => onDeleteContact(id)}>
+          <button className={css.button} type="button" onClick={() => onDeleteContact(id)}>
             Delete
           </button>
         </li>
