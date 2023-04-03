@@ -17,7 +17,7 @@ function App ( ){
   }, [contacts]);
  
 
-  const handleSubmit = ({ name, number }) => {
+  const handleSubmit = (name, number) => {
     contacts.some((contact) => contact.name.toLowerCase() === name.toLowerCase())
       ? alert(name + " is already in your contacts.")
       : setContacts((prevState) => [
