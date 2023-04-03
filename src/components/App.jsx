@@ -7,7 +7,7 @@ import Contacts from "components/Form/Contacts";
 function App ( ){
 
   const [contacts, setContacts] = useState(() => {
-    return JSON.parse(localStorage.getItem("contacts")) || [ ];
+    return JSON.parse(localStorage.getItem("contacts")) || [];
   });
 
   const [filter, setFilter] = useState("");
@@ -27,7 +27,7 @@ function App ( ){
   };
 
   const filterNames = (e) => {
-    setFilter(e.currentTarget.value)
+    setFilter(e.currentTarget.value);
   };
 
   const handleDelete = (contactId) => {
@@ -45,7 +45,7 @@ function App ( ){
           <Form onFormSubmit={handleSubmit} />
           <h2>Contacts</h2>
           <Filter value={filter} onChangeName={filterNames} />
-          <Contacts contacts={filteredContacts} onDeleteContact={handleDelete} />
+          <Contacts contacts={filteredContacts()} onDeleteContact={handleDelete} />
         </div>
   );
 }
