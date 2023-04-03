@@ -22,7 +22,7 @@ export default function Form ({onFormSubmit}) {
 
   const handleState = (e) => {
     e.preventDefault();
-    onFormSubmit(name, number);
+    onFormSubmit (name, number);
     setName("");
     setNumber("");
   };
